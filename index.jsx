@@ -1,7 +1,6 @@
 const { Plugin } = require('powercord/entities');
 const { React, getModule } = require("powercord/webpack");
 const { inject, uninject } = require("powercord/injector");
-const { findInReactTree } = require("powercord/util");
 
 module.exports = class CharacterCount extends Plugin {
   async startPlugin() {
