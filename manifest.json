@@ -1,0 +1,7 @@
+{
+	"name": "Character Count",
+	"author": "bakzkndd",
+	"license": "MIT",
+	"version": "1.0.0",
+	"description": "Adds a helpful character count to the bottom right of your message bar"
+  }
