@@ -5,7 +5,9 @@ const { inject, uninject } = require("powercord/injector");
 module.exports = class CharacterCount extends Plugin {
   async startPlugin() {
 
-    const ChannelTextAreaContainer = await getModule(m => m.default && m.default.displayName === 'SlateCharacterCount', false);
+    this.loadStylesheet('./style.css')
+
+    const ChannelTextAreaContainer = await getModule(m => m.default && m.default.displayName === 'SlateCharacterCount');
     
     inject('CharacterCount', ChannelTextAreaContainer, 'default', (args, res) => {
 
