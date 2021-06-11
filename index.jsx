@@ -9,11 +9,8 @@ module.exports = class CharacterCount extends Plugin {
     
     inject('CharacterCount', ChannelTextAreaContainer, 'default', (args, res) => {
 
-      return React.createElement(
-        'div', 
-        {className: "CharacterCount", id: "CharacterCount"},
-        `Characters Typed: ${args[0].currentLength}`
-      )
+      return <div className= {`${getModule('characterCount', 'upsell').characterCount} characterCount`}>{`Characters Typed: ${args[0].currentLength}`}</div>
+      
 
     });
 
