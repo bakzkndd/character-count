@@ -9,7 +9,7 @@ module.exports = class CharacterCount extends Plugin {
 
     const ChannelTextAreaContainer = await getModule(m => m.default && m.default.displayName === 'SlateCharacterCount');
     
-    inject('CharacterCount', ChannelTextAreaContainer, 'default', (args, res) => {
+    inject('CharacterCount', getModule(m => m?.default?.displayName === 'SlateCharacterCount'), 'default', (args, res) => {
 
       return <div className= {`${getModule('characterCount', 'upsell').characterCount} characterCount`}>{`Characters Typed: ${args[0].currentLength}`}</div>
       
